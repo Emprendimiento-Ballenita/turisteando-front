@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Por favor, agregue una guía</h2>
+<app-guide-create-and-edit (editCanceled)="onCancelEdit()"
+                           (guideAdded)="onGuideAdded($event)"
+                           (guideUpdated)="onGuideUpdated($event)"
+                           [editMode] = "isEditMode"
+                           [guide]="guideData"></app-guide-create-and-edit>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+</mat-dialog-actions>

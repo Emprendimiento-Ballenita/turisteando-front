@@ -1,0 +1,92 @@
+.mat-elevation-z8 {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-elevation-z8 th,
+.mat-elevation-z8 td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.mat-elevation-z8 th {
+  background-color: #f0f0f0;
+}
+
+.mat-elevation-z8 tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mat-elevation-z8 tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+.mat-elevation-z8 tbody tr.editable-row {
+  background-color: #ffe0b2; /* Cambiar el color de fondo de la fila en modo de edición */
+}
+
+.mat-paginator {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mat-paginator-range-label,
+.mat-paginator-page-size-label {
+  font-size: 14px;
+}
+
+.mat-paginator-navigation {
+  margin: 0 10px;
+}
+
+.mat-icon {
+  cursor: pointer;
+}
+
+.mat-icon:hover {
+  color: #212121;
+}
+
+.editable-row .mat-icon {
+  display: none; /* Ocultar los íconos de edición y eliminación cuando la fila está en modo de edición */
+}
+
+.delete {
+  color: #df0909;
+}
+
+.edit {
+  color: #30df09;
+}
+
+h1 {
+  font-size: 36px; /* Tamaño de fuente más grande */
+  font-weight: bold;
+  color: #2196f3; /* Color azul */
+  text-align: left;
+  margin-bottom: 20px; /* Mayor espacio en la parte inferior */
+  text-transform: uppercase;
+  letter-spacing: 4px; /* Espaciado entre caracteres aumentado */
+  border-top: 4px solid #2196f3;
+  border-bottom: 4px solid #2196f3; /* Línea inferior más gruesa */
+  padding-bottom: 5px; /* Espacio adicional en la parte inferior */
+  padding-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+  transition: all 0.3s ease-in-out; /* Efecto de transición suave */
+}
+
+h1:hover {
+  color: #152cc0; /* Cambio de color al pasar el mouse */
+  border-color: #1565c0; /* Cambio de color de la línea inferior al pasar el mouse */
+}
+
+.back-app {
+  background-image: url(https://cuscoperuadventure.com/wp-content/uploads/2017/12/IMG_20160428_114931250.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* La imagen de fondo cubrirá todo el contenedor*/
+  background-position: center; /* La imagen de fondo se posicionará centrada */
+}
