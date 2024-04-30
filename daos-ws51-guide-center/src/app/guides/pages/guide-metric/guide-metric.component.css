@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.body {
+  background-image: url('https://img.freepik.com/foto-gratis/hermosa-foto-paisaje-verde-cielo-azul-claro_181624-30368.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+}
+

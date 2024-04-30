@@ -1,0 +1,13 @@
+.body {
+  background-image: url('https://img.freepik.com/foto-gratis/hermosa-foto-paisaje-verde-cielo-azul-claro_181624-30368.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+}
+.message{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 400px;
+  color: black;
+}

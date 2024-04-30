@@ -1,0 +1,44 @@
+{
+  "guide-metric": [
+    {
+      "tourist_id": "1",
+      "tourist_image": "https://i0.wp.com/www.diarlu.com/wp-content/uploads/2019/09/rostro-mujer-adulta.jpg?resize=500%2C500&ssl=1",
+      "tours": 2,
+      "satisfaction": "Excelente",
+      "rate": 4.7,
+      "comment": "Fue un gran guía, nos ayudó durante toda la travesía."
+    },
+    {
+      "tourist_id": "2",
+      "tourist_image": "https://images.unsplash.com/photo-1557296387-5358ad7997bb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zdHJvfGVufDB8fDB8fHww",
+      "tours": 1,
+      "satisfaction": "Buena",
+      "rate": 3.9,
+      "comment": "Fue un buen guía; cumplió con nuestras espectativas."
+    },
+    {
+      "tourist_id": "3",
+      "tourist_image": "https://iqgvblog.com/wp-content/uploads/2013/03/moda-masculina-lentes-cara-hombre-carametria-caramorfoligia-consultoria-de-imagen.jpg",
+      "tours": 3,
+      "satisfaction": "Excelente",
+      "rate": 4.5,
+      "comment": "Gran persona y guía turístico. Nos llevó a todos lugares"
+    },
+    {
+      "tourist_id": "4",
+      "tourist_image": "https://img.freepik.com/foto-gratis/disparo-cabeza-hombre-atractivo-sonriendo-complacido-mirando-intrigado-pie-sobre-fondo-azul_1258-65468.jpg",
+      "tours": 1,
+      "satisfaction": "Mala",
+      "rate": 1.6,
+      "comment": "Llegó tarde y no cumplió con la ruta planeada. Mal servicio."
+    },
+    {
+      "tourist_id": "5",
+      "tourist_image": "https://media.istockphoto.com/id/1081389092/es/foto/hombre-cauc%C3%A1sico-real-con-expresi%C3%B3n-en-blanco.jpg?s=612x612&w=0&k=20&c=JKHYu94Mip2Kxloq-fiPGck7CnlUX9UFftsBwhon-0M=",
+      "tours": 2,
+      "satisfaction": "Regular",
+      "rate": 2.5,
+      "comment": "Cumplió con lo esperado. No tiene un caracter agradable."
+    }
+  ]
+}
