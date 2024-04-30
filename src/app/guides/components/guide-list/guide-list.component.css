@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+#filtros-container{
+  display: flex;
+  justify-content: left;
+}
+.apto-container{
+  display: flex;
+  align-items: center;
+}
+mat-slider {
+  width: 300px;
+}
+#sliderb{
+  margin-left: 100px;
+}
+.example-margin {
+  margin: 8px;
+}
+.example-label-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px 0;
+  max-width: 284px;
+}

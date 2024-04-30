@@ -1,0 +1,125 @@
+<mat-card>
+  <mat-card-content>
+
+    <mat-form-field>
+      <mat-label>Búsqueda</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input>
+    </mat-form-field>
+    <div id="filtros-container">
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Ordenar y filtrar
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-panel-description>
+              <div id="apto-container">
+                <mat-selection-list #setting>
+                  @for (setting of settings; track setting) {
+                    <mat-list-option>{{setting}}</mat-list-option>
+                  }
+                </mat-selection-list>
+              </div>
+          </mat-panel-description>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Seleccionar diomas
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-panel-description>
+      <mat-selection-list #idioma>
+        @for (language of typesOfLanguages; track language) {
+          <mat-list-option>{{language}}</mat-list-option>
+        }
+      </mat-selection-list>
+          </mat-panel-description>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-card class="example-result-card">
+        <mat-card-content>
+          <div class="example-label-container">
+            <label id="example-name-label" class="example-name-label">Precio mínimo</label>
+            <label class="example-value-label">{{slider.value}}</label>
+          </div>
+          <mat-slider
+            class="example-margin"
+            [disabled]="disabled"
+            [max]="max"
+            [min]="min"
+            [step]="step"
+            [discrete]="thumbLabel"
+            [showTickMarks]="showTicks">
+            <input matSliderThumb [(ngModel)]="value" #slider>
+          </mat-slider>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element" (click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element" (click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="destination">
+        <th mat-header-cell *matHeaderCellDef> Destino </th>
+        <td mat-cell *matCellDef="let element" (click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.destination}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="language">
+        <th mat-header-cell *matHeaderCellDef> Idioma </th>
+        <td mat-cell *matCellDef="let element" (click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.language.join(', ')}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="specialization">
+        <th mat-header-cell *matHeaderCellDef> Especialización </th>
+        <td mat-cell *matCellDef="let element" (click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.specialization.join(', ')}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="availability">
+        <th mat-header-cell *matHeaderCellDef> Disponibilidad </th>
+        <td mat-cell *matCellDef="let element"(click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.availability}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="rate">
+        <th mat-header-cell *matHeaderCellDef> Puntuación </th>
+        <td mat-cell *matCellDef="let element"(click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.rate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Precio </th>
+        <td mat-cell *matCellDef="let element"(click)="redirectToGuide(element.id)" style="cursor: pointer;"> {{element.price}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="experience">
+        <th mat-header-cell *matHeaderCellDef> Experiencia </th>
+        <td mat-cell *matCellDef="let element"(click)="redirectToGuide(element.id)" style="cursor: pointer;">{{element.experience}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="picture">
+        <th mat-header-cell *matHeaderCellDef> Imagen </th>
+        <td mat-cell *matCellDef="let element"(click)="redirectToGuide(element.id)" style="cursor: pointer;"><img  width="100px" height="100px" [src]="element.picture">   </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" [attr.colspan]="displayedColumns.length">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+
+  </mat-card-content>
+</mat-card>
+
+
