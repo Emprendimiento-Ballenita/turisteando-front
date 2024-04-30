@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Turisteando</span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+
+  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+    <mat-icon>open_in_new</mat-icon>
+  </button>
+
+  <span class="mat-spacer"></span>
+
+
+
+  @for(option of options; track option.title) {
+    <a mat-button [routerLink]="option.path">{{ option.title }}</a>
+  }
+
+</mat-toolbar>
+
+
+
+
+<router-outlet/>
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
+  <p>Copyright © 2024 EmprendimientoBallenita, All rights reserved.</p>
+  <p>Developed by Diego A.</p>
+</footer>

@@ -1,0 +1,25 @@
+.form-section {
+  display: table;
+}
+
+.form-row {
+  display: table-cell;
+  max-width: 2400px;
+}
+
+.form-row .mat-raised-button {
+  margin-right: 8px;
+}
+
+.form-row .mat-form-field {
+  margin-right: 8px;
+}
+
+.form-row #number-form-field {
+  margin-right: 8px;
+  width: 15%;
+}
+
+.espacio-inferior {
+  margin-bottom: 20px;
+}

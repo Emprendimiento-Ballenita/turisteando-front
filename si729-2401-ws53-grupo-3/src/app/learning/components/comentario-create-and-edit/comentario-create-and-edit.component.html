@@ -1,0 +1,28 @@
+<!-- Create and Edit Form -->
+<h2>{{ editMode ? 'Editar Comentario' : 'Nuevo Comentario' }}</h2>
+<div class="form-section">
+  <form (submit)="onSubmit()" #comentarioForm='ngForm' class="form-row">
+    <mat-form-field style=" width: 30%;">
+      <input matInput placeholder="Nombre del Guia" name="nameGuia" required [(ngModel)]="comentario.nameGuia">
+    </mat-form-field>
+    <mat-form-field id="number-form-field" style=" width: 30%;">
+      <input matInput placeholder="Estrellas" name="numEstrellas" required [(ngModel)]="comentario.numEstrellas">
+    </mat-form-field>
+    <mat-form-field style=" width: 100%;">
+      <input matInput placeholder="Comentario" name="descripcion" required [(ngModel)]="comentario.descripcion">
+    </mat-form-field>
+    <mat-form-field style=" width: 30%;">
+
+      <input matInput placeholder="Fecha" name="fecha" required [(ngModel)]="comentario.fecha">
+    </mat-form-field>
+
+
+    <ng-container *ngIf="editMode; else elseTemplate">
+      <button mat-raised-button color="primary">Update</button>
+      <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <button mat-raised-button color="primary">Add</button>
+    </ng-template>
+  </form>
+</div>

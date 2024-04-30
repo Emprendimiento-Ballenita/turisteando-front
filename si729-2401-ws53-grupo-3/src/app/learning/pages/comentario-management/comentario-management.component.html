@@ -1,0 +1,45 @@
+<!-- Comentario catalogue -->
+<div class="table-wrapper">
+  <h1>Social Media</h1>
+
+  <!--Add/Edit Form-->
+  <app-comentario-create-and-edit (editCanceled)="onCancelEdit()"
+                               (comentarioAdded)="onComentarioAdded($event)"
+                               (comentarioUpdated)="onComentarioUpdated($event)"
+                               [editMode] = "isEditMode"
+                               [comentario]="comentarioData"/>
+  <!-- Data Table -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+    <ng-container matColumnDef="idCom">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header> #Id</th>
+      <td *matCellDef="let element" mat-cell>{{ element.idCom }}</td>
+    </ng-container>
+    <ng-container matColumnDef="nameGuia">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>NombreGuia</th>
+      <td *matCellDef="let element" mat-cell>{{ element.nameGuia }}</td>
+    </ng-container>
+    <ng-container matColumnDef="numEstrellas">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Estrellas</th>
+      <td *matCellDef="let element" mat-cell>{{ element.numEstrellas }}</td>
+    </ng-container>
+    <ng-container matColumnDef="descripcion">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Comentario</th>
+      <td *matCellDef="let element" mat-cell>{{ element.descripcion }}</td>
+    </ng-container>
+    <ng-container matColumnDef="fecha">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Fecha</th>
+      <td *matCellDef="let element" mat-cell>{{ element.fecha }}</td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef mat-header-cell> Actions</th>
+      <td *matCellDef="let element" mat-cell>
+        <a (click)="onEditItem(element)" href="javascript:void(0)"><mat-icon>edit</mat-icon></a>
+        <a (click)="onDeleteItem(element)" href="javascript:void(0)"><mat-icon>delete</mat-icon></a>
+      </td>
+    </ng-container>
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns:displayedColumns" [ngClass]="{'editable-row': comentarioData.idCom === row.id }" mat-row></tr>
+  </table>
+  <!-- Paginator child component-->
+  <mat-paginator [pageSizeOptions]="[5, 10, 15]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>
