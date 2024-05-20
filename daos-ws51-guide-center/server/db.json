@@ -1,0 +1,40 @@
+{
+  "guides": [
+    {
+      "id": "1",
+      "name": "Carlos Requena",
+      "destination": "Machu Picchu, Perú",
+      "language": "Español, Inglés, Alemán",
+      "specialization": "Historia, Arqueología",
+      "availability": "Dosponible",
+      "rate": 7.8,
+      "price": "$60 por día",
+      "experience": "Arqueólogo profesional con experiencia en la investigación de sitios arqueológicos, incluyendo Machu Picchu.",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_yZ-oQX01MTs32HOxAz1u4Thj1IV2z-B1-PyI5YP9g&s"
+    },
+    {
+      "id": "2",
+      "name": "María López",
+      "destination": "Machu Picchu, Perú",
+      "language": "español, inglés, francés",
+      "specialization": "historia, arqueología",
+      "availability": "No disponible hasta octubre",
+      "rate": 4.9,
+      "price": "$80 por día",
+      "experience": "Arqueóloga profesional con experiencia en la investigación de sitios arqueológicos, incluyendo Machu Picchu.",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_yZ-oQX01MTs32HOxAz1u4Thj1IV2z-B1-PyI5YP9g&s"
+    },
+    {
+      "id": "3",
+      "name": "Carlos Gómez",
+      "destination": "Bolivia",
+      "language": "español, inglés, portugués",
+      "specialization": "aventura, ecoturismo",
+      "availability": "Disponible",
+      "rate": 4.5,
+      "price": "$60 por día",
+      "experience": "Guía experimentado en aventuras al aire libre y ecoturismo en diversas regiones de Bolivia.",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfvGIPm_aLJgFhAcAsddTsQE3XaEB9sViXDw&s"
+    }
+  ]
+}

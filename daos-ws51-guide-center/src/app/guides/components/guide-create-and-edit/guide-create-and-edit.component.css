@@ -1,0 +1,46 @@
+.form-section {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8); /* Color de fondo semi-transparente */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.mat-form-field {
+  margin-bottom: 20px;
+}
+
+/* Estilo para los botones */
+button {
+  margin-right: 10px;
+}
+
+/* Cambiar color de botones cuando están deshabilitados */
+button[disabled] {
+  opacity: 0.7;
+}
+
+/* Cambiar color de fondo y texto de botones de acuerdo a la clase de color */
+button[color="primary"] {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+button[color="warn"] {
+  background-color: #f44336;
+  color: #ffffff;
+}

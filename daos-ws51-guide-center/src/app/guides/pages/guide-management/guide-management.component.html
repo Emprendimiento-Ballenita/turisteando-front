@@ -1,0 +1,79 @@
+<!-- Student catalogue -->
+<div class="table-wrapper">
+  <h1>Agregar nuevo Guía</h1>
+
+  <!--Add/Edit Form-->
+  <div class="back-app">
+    <app-guide-create-and-edit (editCanceled)="onCancelEdit()"
+                               (guideAdded)="onGuideAdded($event)"
+                               (guideUpdated)="onGuideUpdated($event)"
+                               [editMode] = "isEditMode"
+                               [guide]="guideData"/>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1>Visualizar Guías</h1>
+  <!-- Data Table -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+    <ng-container matColumnDef="id">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>#Id</th>
+      <td *matCellDef="let element" mat-cell>{{ element.id }}</td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Name</th>
+      <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
+    </ng-container>
+    <ng-container matColumnDef="destination">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Destination</th>
+      <td *matCellDef="let element" mat-cell>{{ element.destination }}</td>
+    </ng-container>
+    <ng-container matColumnDef="language">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Language</th>
+      <td *matCellDef="let element" mat-cell>{{ element.language }}</td>
+    </ng-container>
+    <ng-container matColumnDef="specialization">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Specialization</th>
+      <td *matCellDef="let element" mat-cell>{{ element.specialization }}</td>
+    </ng-container>
+    <ng-container matColumnDef="availability">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Availability</th>
+      <td *matCellDef="let element" mat-cell>{{ element.availability }}</td>
+    </ng-container>
+    <ng-container matColumnDef="rate">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Rate</th>
+      <td *matCellDef="let element" mat-cell>{{ element.rate }}</td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Price</th>
+      <td *matCellDef="let element" mat-cell>{{ element.price }}</td>
+    </ng-container>
+    <ng-container matColumnDef="experience">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Experience</th>
+      <td *matCellDef="let element" mat-cell>{{ element.experience }}</td>
+    </ng-container>
+    <ng-container matColumnDef="picture">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Picture</th>
+      <td *matCellDef="let element" mat-cell>
+        <img mat-card-image
+             [src]="element.picture"
+             [alt]="element.name"
+             style="max-width: 400px; height: auto;"/>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef mat-header-cell> Actions</th>
+      <td *matCellDef="let element" mat-cell>
+        <a (click)="onEditItem(element)" href="javascript:void(0)"><mat-icon class="edit">edit</mat-icon></a>
+        <a (click)="onDeleteItem(element)" href="javascript:void(0)"><mat-icon class="delete">delete</mat-icon></a>
+      </td>
+    </ng-container>
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns:displayedColumns" [ngClass]="{'editable-row': guideData.id === row.id }" mat-row></tr>
+  </table>
+  <app-guide-dialog></app-guide-dialog>
+  <!-- Paginator child component-->
+  <mat-paginator [pageSizeOptions]="[5, 10, 15]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>
